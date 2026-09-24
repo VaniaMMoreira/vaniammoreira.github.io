@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vânia Moreira | Faculty of Pharmacy, University of Coimbra</title>
+<meta name="description" content="Academic profile of Vânia M. Moreira, PhD, FHEA, Dos. — Associate Professor of Pharmaceutical Chemistry, Faculty of Pharmacy, University of Coimbra.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#0e6b45;
+    --purple-soft:#e0f2e7;
+    --ink:#242424;
+    --muted:#5a5a5a;
+    --page-bg:#f2f6f3;
+    --card-bg:#ffffff;
+    --card-shadow:0 0 20px rgba(129,129,129,0.16);
+    --border:#e2e9e4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{font-size:16px;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--page-bg);
+    color:var(--ink);
+    line-height:1.55;
+  }
+  a{color:var(--purple);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  /* ---------- HEADER ---------- */
+  .top-bar{
+    background:#161616;
+    padding:0.8rem 1.75rem;
+    display:flex;
+    align-items:center;
+    gap:0.75rem;
+  }
+  .monogram{
+    width:36px;height:36px;border-radius:8px;
+    background:linear-gradient(135deg,var(--purple),#2fa66a);
+    color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;
+    display:flex;align-items:center;justify-content:center;font-size:0.95rem;
+    flex-shrink:0;
+  }
+  .top-bar .wordmark{color:#fff;font-family:'Montserrat',sans-serif;font-size:0.85rem;letter-spacing:0.03em;}
+  .top-bar .wordmark strong{font-weight:700;}
+  .top-bar .wordmark span{display:block;font-size:0.68rem;color:#c9c2ce;font-weight:400;letter-spacing:0.02em;}
+
+  .nav-bar{
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    padding:0 1.75rem;
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    flex-wrap:wrap;
+  }
+  .back-link{
+    font-size:0.78rem;color:var(--muted);padding:1rem 0;font-weight:500;
+    display:flex;align-items:center;gap:0.35rem;white-space:nowrap;
+  }
+  .back-link:hover{text-decoration:none;color:var(--purple);}
+  .tabs{
+    display:flex;gap:1.75rem;margin-left:auto;flex-wrap:wrap;
+    overflow-x:auto;
+  }
+  .tab-btn{
+    background:none;border:none;cursor:pointer;
+    font-family:'Inter',sans-serif;
+    font-size:0.78rem;font-weight:500;letter-spacing:0.05em;
+    color:var(--muted);
+    padding:1.05rem 0.1rem 0.9rem;
+    border-bottom:2px solid transparent;
+    white-space:nowrap;
+  }
+  .tab-btn:hover{color:var(--purple);}
+  .tab-btn.active{color:var(--purple);border-bottom-color:var(--purple);font-weight:600;}
+
+  /* ---------- LAYOUT ---------- */
+  .layout{
+    max-width:1180px;
+    margin:1.75rem auto;
+    padding:0 1.75rem;
+    display:grid;
+    grid-template-columns:270px 1fr;
+    gap:1.5rem;
+    align-items:start;
+  }
+  @media (max-width:860px){
+    .layout{grid-template-columns:1fr;}
+  }
+
+  /* ---------- SIDEBAR ---------- */
+  .sidebar{
+    background:var(--card-bg);
+    border-radius:20px;
+    box-shadow:var(--card-shadow);
+    padding:1.75rem 1.4rem;
+    text-align:center;
+  }
+  .avatar{
+    width:150px;height:150px;border-radius:50%;
+    margin:0 auto 0.9rem;
+    background:linear-gradient(135deg,#1f8f5c,var(--purple));
+    color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:2.1rem;
+    display:flex;align-items:center;justify-content:center;
+    overflow:hidden;
+  }
+  .avatar img{
+    width:100%;height:100%;object-fit:cover;
+  }
+  .badge{
+    font-size:0.68rem;font-weight:700;letter-spacing:0.12em;
+    color:var(--muted);text-transform:uppercase;margin-bottom:0.3rem;
+  }
+  .sidebar h1{
+    font-family:'Montserrat',sans-serif;font-size:1.15rem;font-weight:700;
+    color:var(--ink);margin-bottom:0.9rem;line-height:1.35;
+  }
+  .orcid-row{
+    display:flex;align-items:center;justify-content:center;gap:0.4rem;
+    padding-bottom:0.9rem;margin-bottom:0.9rem;border-bottom:1px dashed var(--border);
+  }
+  .orcid-icon{
+    width:16px;height:16px;border-radius:50%;background:#a6ce39;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .orcid-icon svg{width:11px;height:11px;fill:#fff;}
+  .orcid-row a{font-size:0.82rem;font-weight:500;}
+
+  .info-item{
+    display:flex;gap:0.7rem;align-items:flex-start;
+    text-align:left;margin-bottom:1.1rem;
+  }
+  .info-icon{
+    width:30px;height:30px;border-radius:8px;background:var(--purple-soft);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;
+  }
+  .info-icon svg{width:15px;height:15px;fill:var(--purple);}
+  .info-item .title{font-size:0.85rem;font-weight:700;color:var(--purple);}
+  .info-item .sub{font-size:0.8rem;color:var(--muted);}
+
+  .sidebar-links{
+    border-top:1px dashed var(--border);
+    padding-top:1rem;margin-top:0.3rem;
+    text-align:left;
+  }
+  .sidebar-links a{
+    display:block;font-size:0.82rem;margin-bottom:0.5rem;font-weight:500;
+  }
+
+  /* ---------- MAIN CONTENT ---------- */
+  .panel{display:none;}
+  .panel.active{display:block;}
+  .card{
+    background:var(--card-bg);
+    border-radius:16px;
+    box-shadow:var(--card-shadow);
+    padding:1.5rem 1.6rem 1.6rem;
+    margin-bottom:1.3rem;
+  }
+  .card h2{
+    font-family:'Montserrat',sans-serif;
+    font-size:0.92rem;font-weight:600;letter-spacing:0.02em;
+    text-transform:uppercase;color:var(--purple);
+    margin-bottom:1rem;
+  }
+  .card h3{
+    font-family:'Montserrat',sans-serif;
+    font-size:0.8rem;font-weight:600;letter-spacing:0.03em;
+    text-transform:uppercase;color:var(--ink);
+    margin:1.2rem 0 0.6rem;
+  }
+  .card h3:first-of-type{margin-top:0;}
+  .card p{font-size:0.9rem;color:var(--ink);margin-bottom:0.7rem;}
+  .card p:last-child{margin-bottom:0;}
+
+  .entry-list{list-style:none;}
+  .entry-list li{
+    position:relative;padding-left:1.1rem;margin-bottom:0.65rem;
+    font-size:0.88rem;color:var(--ink);
+  }
+  .entry-list li::before{
+    content:'';position:absolute;left:0;top:0.5em;
+    width:5px;height:5px;border-radius:50%;background:var(--purple);
+  }
+  .entry-list .when{color:var(--purple);font-weight:600;}
+
+  .pill-row{display:flex;flex-wrap:wrap;gap:0.6rem;}
+  .pill{
+    background:var(--purple-soft);color:var(--purple);
+    font-size:0.8rem;font-weight:500;
+    padding:0.4rem 0.95rem;border-radius:999px;
+  }
+
+  .timeline{list-style:none;border-left:2px solid var(--border);margin-left:0.4rem;}
+  .timeline li{
+    position:relative;padding:0 0 1.1rem 1.3rem;font-size:0.88rem;
+  }
+  .timeline li::before{
+    content:'';position:absolute;left:-6.5px;top:3px;
+    width:11px;height:11px;border-radius:50%;
+    background:#fff;border:2px solid var(--purple);
+  }
+  .timeline li:last-child{padding-bottom:0;}
+  .timeline .when{display:block;color:var(--purple);font-weight:600;font-size:0.78rem;letter-spacing:0.02em;margin-bottom:0.15rem;}
+
+  .subnote{font-size:0.8rem;color:var(--muted);margin-top:0.3rem;}
+
+  footer{
+    max-width:1180px;margin:0 auto;padding:1.5rem 1.75rem 2.5rem;
+    font-size:0.78rem;color:var(--muted);text-align:center;
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="monogram">VM</div>
+  <div class="wordmark"><strong>Vânia M. Moreira</strong><span>Faculty of Pharmacy · University of Coimbra</span></div>
+</div>
+
+<div class="nav-bar">
+  <a class="back-link" href="https://www.uc.pt/en/ff/" target="_blank" rel="noopener">&#8592; Faculty of Pharmacy, UC</a>
+  <div class="tabs" id="tabs">
+    <button class="tab-btn active" data-panel="about">ABOUT</button>
+    <button class="tab-btn" data-panel="career">CAREER</button>
+    <button class="tab-btn" data-panel="research">RESEARCH</button>
+    <button class="tab-btn" data-panel="teaching">TEACHING</button>
+    <button class="tab-btn" data-panel="expertise">EXPERTISE &amp; SERVICE</button>
+  </div>
+</div>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="avatar"><img src="vania-moreira.jpg" alt="Vânia M. Moreira"></div>
+    <div class="badge">Assoc. Prof.</div>
+    <h1>Vânia M. Moreira<br>PhD, FHEA, <em>Dos.</em></h1>
+
+    <div class="orcid-row">
+      <span class="orcid-icon">
+        <svg viewBox="0 0 256 256"><path d="M128 24a104 104 0 1 0 104 104A104.12 104.12 0 0 0 128 24ZM90 82a10 10 0 1 1-10 10 10 10 0 0 1 10-10Zm12 108H82V110h20Zm70 0h-20v-46c0-14-6-20-16-20a20 20 0 0 0-18 12v54H98V110h19v11a34 34 0 0 1 27-13c17 0 28 11 28 32Z"/></svg>
+      </span>
+      <a href="https://orcid.org/0000-0001-6169-5035" target="_blank" rel="noopener">0000-0001-6169-5035</a>
+    </div>
+
+    <div class="info-item">
+      <span class="info-icon">
+        <svg viewBox="0 0 24 24"><path d="M10 2a1 1 0 1 0 0 2h.5v4.86l-4.5 7.79A2 2 0 0 0 7.73 20h8.54a2 2 0 0 0 1.73-3.35L13.5 8.86V4h.5a1 1 0 1 0 0-2Zm1.5 2h1v5.2l.14.35L16.9 18H7.1l4.26-7.45.14-.35Z"/></svg>
+      </span>
+      <div>
+        <div class="title">Associate Professor</div>
+        <div class="sub">Pharmaceutical Chemistry · Faculty of Pharmacy, University of Coimbra, Portugal</div>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <span class="info-icon">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="2"/>
+          <ellipse cx="12" cy="12" rx="9" ry="3.6" style="fill:none;stroke:var(--purple);stroke-width:1.3"/>
+          <ellipse cx="12" cy="12" rx="9" ry="3.6" style="fill:none;stroke:var(--purple);stroke-width:1.3" transform="rotate(60 12 12)"/>
+          <ellipse cx="12" cy="12" rx="9" ry="3.6" style="fill:none;stroke:var(--purple);stroke-width:1.3" transform="rotate(120 12 12)"/>
+        </svg>
+      </span>
+      <div>
+        <div class="title">Visiting Researcher</div>
+        <div class="sub">Faculty of Pharmacy, University of Helsinki, Finland</div>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <span class="info-icon">
+        <svg viewBox="0 0 24 24">
+          <polygon points="12,3 20,7.5 20,16.5 12,21 4,16.5 4,7.5" style="fill:none;stroke:var(--purple);stroke-width:1.6"/>
+          <polygon points="12,6.2 17.2,9.1 17.2,14.9 12,17.8 6.8,14.9 6.8,9.1" style="fill:none;stroke:var(--purple);stroke-width:1.1"/>
+        </svg>
+      </span>
+      <div>
+        <div class="title">Vice-President, GP2A</div>
+        <div class="sub">Group for the Promotion of Pharmaceutical Chemistry in Academia</div>
+      </div>
+    </div>
+
+    <div class="sidebar-links">
+      <a href="https://orcid.org/0000-0001-6169-5035" target="_blank" rel="noopener">View full publication record (ORCID) ↗</a>
+      <a href="https://www.cienciavitae.pt/981F-DD99-F0B7" target="_blank" rel="noopener">View profile on Ciência Vitae (CiênciaID) ↗</a>
+      <a href="https://gp2a.org/" target="_blank" rel="noopener">GP2A homepage ↗</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- ABOUT -->
+    <section class="panel active" id="about">
+      <div class="card">
+        <h2>Bio</h2>
+        <p>Vânia Moreira is Associate Professor of Pharmaceutical Chemistry at the Faculty of Pharmacy, University of Coimbra, Portugal, and a Visiting Researcher at the Faculty of Pharmacy, University of Helsinki, Finland. She holds a PhD in Pharmacy from the University of Coimbra (2008), undertaken in collaboration with the University of Maryland School of Medicine, Baltimore, USA, and completed with the highest-scoring grade, "Passed with Distinction and Honours."</p>
+        <p>She is a Fellow of the Higher Education Academy (FHEA, UK) and holds the Finnish academic title of Docent (Dosentti) in Pharmaceutical Chemistry from the University of Helsinki. Her career spans research and teaching positions across Portugal, Finland and the United Kingdom, including as University Lecturer B (Chancellor's Research Fellow) at the University of Strathclyde and as Principal Investigator at the University of Helsinki. She currently serves as Vice-President of the GP2A (Group for the Promotion of Pharmaceutical Chemistry in Academia).</p>
+      </div>
+
+      <div class="card">
+        <h3>Titles</h3>
+        <ul class="entry-list">
+          <li><span class="when">2018</span> — Fellow of the Higher Education Academy UK (FHEA), Higher Education Academy, United Kingdom</li>
+          <li><span class="when">2015</span> — Title of Docent (Dos.), Pharmaceutical Chemistry, University of Helsinki, Finland</li>
+        </ul>
+        <h3>Degrees</h3>
+        <ul class="entry-list">
+          <li><span class="when">2019</span> — Post-graduate in Knowledge Exchange, University of Strathclyde, Scotland</li>
+          <li><span class="when">2008</span> — PhD (Pharmacy), University of Coimbra, Portugal — in collaboration with the University of Maryland School of Medicine, Baltimore, USA. Highest-scoring grade, "Passed with Distinction and Honours"</li>
+          <li><span class="when">2003</span> — MSc (Pharmacy), University of Coimbra, Portugal — First-class honours (17 out of 20)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Fields of Research</h2>
+        <div class="pill-row">
+          <span class="pill">Pharmaceutical Chemistry</span>
+          <span class="pill">Medicinal Chemistry</span>
+          <span class="pill">Drug Discovery</span>
+          <span class="pill">Organic Chemistry</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREER -->
+    <section class="panel" id="career">
+      <div class="card">
+        <h2>Previous Work Experience</h2>
+        <ul class="timeline">
+          <li><span class="when">Jan 2024 – Dec 2026</span>Vice-President of the GP2A (Group for the Promotion of Pharmaceutical Chemistry in Academia)</li>
+          <li><span class="when">Sep 2019 – Apr 2024</span>Assistant Professor, Faculty of Pharmacy, University of Coimbra, Portugal</li>
+          <li><span class="when">Sep 2017 – Aug 2020</span>University Lecturer B (Chancellor's Research Fellow), Strathclyde Institute of Pharmacy and Biomedical Sciences (SIPBS), University of Strathclyde, United Kingdom</li>
+          <li><span class="when">May 2015 – Oct 2018</span>Principal Investigator, Faculty of Pharmacy, University of Helsinki, Finland</li>
+          <li><span class="when">May 2012 – May 2015</span>Post-Doctoral Researcher, Faculty of Pharmacy, University of Helsinki, Finland</li>
+          <li><span class="when">Apr 2009 – Apr 2012</span>Portuguese Science and Technology Foundation Post-Doctoral Fellow (SFRH/BPD/45037/2008), University of Coimbra, Portugal</li>
+          <li><span class="when">Oct 2008 – Feb 2012</span>Assistant Professor, Universidade Lusófona de Humanidades e Tecnologias, Portugal</li>
+          <li><span class="when">2008 – 2009</span>Coordinating Professor, Escola Superior de Saúde Ribeiro Sanches (ERISA), Portugal</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Career Breaks</h2>
+        <ul class="entry-list">
+          <li><span class="when">Jun 2016 – May 2017</span> — Maternity leave</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="panel" id="research">
+      <div class="card">
+        <h2>Research Output</h2>
+        <p>Full publication record available via <a href="https://orcid.org/0000-0001-6169-5035" target="_blank" rel="noopener">ORCID: 0000-0001-6169-5035</a>.</p>
+      </div>
+
+      <div class="card">
+        <h2>Research Funding and Grants</h2>
+        <ul class="entry-list">
+          <li><span class="when">2026–2029</span> — COMPETE2030-FEDER-04091800, MPr-2026-2-STEP-I&amp;D&amp;I Empresarial – Digital e Biotecnologia – Copromoção, project 28664 (DERM3D) — Project Participant</li>
+          <li><span class="when">2022–2023</span> — INOVC+, project IT0179.01 – INOV-C+ (co-PI)</li>
+          <li><span class="when">2021–2025 / 2011–2013</span> — Portuguese Science and Technology Foundation: project LA/P/0058/2020; UI 313 (2011–2012) — Project Participant</li>
+          <li><span class="when">2019–2021</span> — Tenovus Scotland, project S18-23 — Principal Investigator</li>
+          <li><span class="when">2018–2021</span> — Engineering and Physical Sciences Research Council (EPSRC), UK, Doctoral Training Partnership 2018-19 (for Declan C. Mullen) — Principal Investigator</li>
+          <li><span class="when">2017–2018</span> — University of Strathclyde start-up funds, project GEN1227-201 — Principal Investigator</li>
+          <li><span class="when">2016–2018</span> — Business Finland (former Tekes), project 1297/31/2016 — Principal Investigator</li>
+          <li><span class="when">2016–2018</span> — COST Action CM1307, Management Committee Member (representing Finland)</li>
+          <li><span class="when">2014 and 2015</span> — Huonekalusäätiö — Principal Investigator</li>
+          <li><span class="when">2014–2018</span> — University of Helsinki Research Funds (doctoral scholarship, L. E. Kolsi) — Principal Investigator</li>
+          <li><span class="when">2013–2018</span> — European Union, FP7-HEALTH-2013-INNOVATION-1, project 602919 (GLORIA), main grant writer &amp; WP leader (drug discovery)</li>
+          <li><span class="when">2012–2013</span> — Magnus Ehrnrooth Foundation, project ME2012n44 — Principal Investigator</li>
+          <li><span class="when">2012 / 2010</span> — Academy of Finland, decisions 264020 and 252308 — Project Participant</li>
+          <li><span class="when">2011–2014</span> — Forestcluster Ltd. &amp; TEKES, FuBio Joint Research 2 — Project Participant</li>
+          <li><span class="when">2009–2012 / 2004–2008</span> — Portuguese Science and Technology Foundation: SFRH/BPD/45037/2008 (Post-Doctoral Grant); SFRH/BD/12508/2003 (Doctoral scholarship)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Research Supervision and Leadership</h2>
+        <h3>Doctoral Supervision — Current</h3>
+        <ul class="entry-list">
+          <li>T. Duarte <span class="when">(2026– )</span>, University of Coimbra</li>
+          <li>O. Antoniuk <span class="when">(2023– )</span>, University of Coimbra</li>
+          <li>L. C. Domingues <span class="when">(2022–, co-supervisor)</span>, University of Coimbra</li>
+        </ul>
+        <h3>Doctoral Supervision — Completed</h3>
+        <ul class="entry-list">
+          <li>Tiina Ahonen <span class="when">(2023)</span>, University of Helsinki</li>
+          <li>Ghada Hassan <span class="when">(2021)</span>, University of Helsinki</li>
+          <li>Nina Forsman <span class="when">(2020, co-supervisor)</span>, Aalto University</li>
+          <li>Laura E. Kolsi <span class="when">(2018)</span>, University of Helsinki</li>
+          <li>Raisa Haavikko <span class="when">(2015, co-supervisor)</span>, University of Helsinki</li>
+          <li>Nehad El-Salamouni <span class="when">(2013, co-supervisor)</span>, University of Alexandria</li>
+        </ul>
+        <h3>Postdoctoral Supervision</h3>
+        <ul class="entry-list">
+          <li>Dr. Xing Wan <span class="when">(2017–2018)</span>, University of Helsinki</li>
+          <li>Dr. Leena Keurulainen <span class="when">(2016–2017)</span>, University of Helsinki</li>
+        </ul>
+        <h3>Other Supervision</h3>
+        <ul class="entry-list">
+          <li>M.Sc. students: University of Coimbra (22), University of Helsinki (7), University of Strathclyde (9)</li>
+          <li>Other supervisions (27)</li>
+        </ul>
+        <h3>Leadership Training</h3>
+        <p>2015/16 — UniLead, official leadership course for academic staff (UniLead 3), University of Helsinki, by appointment of the Dean.</p>
+      </div>
+    </section>
+
+    <!-- TEACHING -->
+    <section class="panel" id="teaching">
+      <div class="card">
+        <h2>Teaching Merits</h2>
+        <h3>Recognition of Teaching Excellence</h3>
+        <ul class="entry-list">
+          <li><span class="when">2018</span> — Fellow of the Higher Education Academy (FHEA), Higher Education Academy, UK</li>
+          <li><span class="when">2015</span> — Dosentti, Pharmaceutical Chemistry, University of Helsinki, Finland</li>
+        </ul>
+        <h3>Pedagogical Courses</h3>
+        <ul class="entry-list">
+          <li><span class="when">2018</span> — Supervising Postgraduate Research, University of Strathclyde</li>
+          <li><span class="when">2018</span> — Enhancing Learning, Teaching, and Assessment at Strathclyde, University of Strathclyde</li>
+          <li><span class="when">2014</span> — Academic Supervising, University of Helsinki</li>
+          <li><span class="when">2013</span> — Curriculum Design and Assessment of Learning and Teaching, University of Helsinki</li>
+        </ul>
+        <h3>Research-Based Development of Teaching</h3>
+        <ul class="entry-list">
+          <li><span class="when">2025</span> — Lead author of a publication in <em>J. Chem. Educ.</em> (ACS) applying the chemistry of diterpenoids to teach the concept of epimerization to B.Sc. and M.Sc. students</li>
+          <li><span class="when">2018–2025</span> — Contributor to the book series "Organic Reaction Mechanisms" (John Wiley &amp; Sons Ltd), Chapter 6 (Carbocations), edited by Prof. Mark G. Moloney, University of Oxford, UK</li>
+        </ul>
+        <h3>Teaching Experience</h3>
+        <p>&gt;20 years of teaching experience across 5 universities:</p>
+        <ul class="entry-list">
+          <li><span class="when">2019– </span>University of Coimbra, Portugal — 5 B.Sc. courses, 6 M.Sc. courses</li>
+          <li><span class="when">2017–2020</span> University of Strathclyde, UK — 5 M.Sc. courses</li>
+          <li><span class="when">2012–2015</span> University of Helsinki, Finland — 1 B.Sc. course, 2 M.Sc. courses</li>
+          <li><span class="when">2008–2012</span> Universidade Lusófona de Humanidades e Tecnologias, Portugal — 2 M.Sc. courses</li>
+          <li><span class="when">2009–2010</span> ERISA, Portugal — 1 B.Sc. course</li>
+        </ul>
+        <p class="subnote">Plus several invited lectures in doctoral programmes in Finland, Ireland and Portugal.</p>
+      </div>
+    </section>
+
+    <!-- EXPERTISE & SERVICE -->
+    <section class="panel" id="expertise">
+      <div class="card">
+        <h2>Awards and Honors</h2>
+        <h3>Awards</h3>
+        <ul class="entry-list">
+          <li><span class="when">2017</span> — Chancellor's Research Fellowship, University of Strathclyde</li>
+          <li><span class="when">2013</span> — Semi-finalist team, OneStart Competition, OxbridgeBiotech, UK</li>
+          <li>Portuguese Science and Technology Foundation post-doctoral <span class="when">(2008)</span> and doctoral <span class="when">(2003)</span> scholar</li>
+          <li><span class="when">2003</span> — Sociedade Farmacêutica Lusitana Award (best student of Pharmaceutical Sciences of the year, Portugal)</li>
+        </ul>
+        <h3>Honors</h3>
+        <ul class="entry-list">
+          <li>Invited participation and named in the opinion article, <em>MEDCHEMCOMM</em>, <span class="when">2017</span>, 9: 2040–2503</li>
+          <li>Named one of the New Talents Europe 2016 by the European Federation for Medicinal Chemistry &amp; Chemical Biology (EFMC)</li>
+          <li>Selected for interview stage, ERC Starting Grant proposal <span class="when">(2015)</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Other Key Academic Merits</h2>
+        <h3>Administrative Responsibilities</h3>
+        <ul class="entry-list">
+          <li><span class="when">2024–2027</span> — External Examiner (Board), M.Pharm Programme, Trinity College Dublin, Ireland</li>
+          <li><span class="when">2018–2019</span> — Member, planning committee of the International Master's Programme in Pharmacy, University of Helsinki</li>
+          <li><span class="when">2018–2020</span> — Elected member, Faculty of Science Resources and Planning Committee (FRAP), University of Strathclyde</li>
+          <li><span class="when">2016–2018</span> — COST Action CM1307, Management Committee Member (representing Finland)</li>
+          <li><span class="when">2014–2015</span> — Head of the Drug Discovery Unit, Faculty of Pharmacy, University of Helsinki</li>
+        </ul>
+        <h3>Evaluation and Peer Review</h3>
+        <ul class="entry-list">
+          <li>Evaluation of academic competence: Research Outputs and Standing of Members of Staff, South Africa (1)</li>
+          <li>Peer review of funding applications for: Cyprus Research and Innovation Foundation (RIF); Agence Nationale de la Recherche, France; The Science Fund of the Republic of Serbia; Biotechnological and Biological Sciences Research Council (BBSRC), UK; Slovenian Research Agency (ARRS); University of Eastern Finland Doctoral Programme in Drug Research; Independent Research Fund Denmark | Technology and Production</li>
+          <li>Reviewer for &gt;40 chemistry journals across organic, medicinal and materials chemistry</li>
+        </ul>
+        <h3>Doctoral Education</h3>
+        <ul class="entry-list">
+          <li>Opponent of PhD dissertations (11); Membership in PhD committees (2)</li>
+          <li>Opponent in M.Sc. dissertations (12)</li>
+        </ul>
+        <h3>Memberships and Positions of Trust</h3>
+        <ul class="entry-list">
+          <li>Vice-President of the GP2A <span class="when">(2024–2026)</span>; Committee Member <span class="when">(2019– )</span></li>
+          <li>Member, Finnish Pharmaceutical Society <span class="when">(2012–2017)</span></li>
+          <li>Member, European Federation of Medicinal Chemistry &amp; Chemical Biology (EFMC) <span class="when">(2011– )</span></li>
+          <li>Member, Portuguese Society of Chemistry <span class="when">(2011– )</span></li>
+          <li>Member, American Chemical Society (ACS) <span class="when">(2003– )</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Scientific and Societal Impact</h2>
+        <h3>Outreach Activities</h3>
+        <ul class="entry-list">
+          <li><span class="when">2023–2025</span> — Participation in "Open University Days," University of Coimbra</li>
+          <li><span class="when">2022</span> — Participant, Soapbox Science event, Coimbra, Portugal (antimicrobial resistance, public engagement)</li>
+          <li><span class="when">2019</span> — Participant, "Day of Science," University of Strathclyde</li>
+          <li><span class="when">2014</span> — Meeting with the Swedish Rheumatism Association (Kristin Blidberg) for EU-funded project GLORIA</li>
+        </ul>
+        <h3>Media and Research Communication</h3>
+        <ul class="entry-list">
+          <li><span class="when">2023</span> — Interviewed by newspaper <em>EXPRESSO</em> (50 Key Women in Science)</li>
+          <li><span class="when">2012</span> — Doctoral work covered in EU project Atomium Culture chemistry articles</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  Vânia M. Moreira, PhD, FHEA, <em>Dos.</em> · Faculty of Pharmacy, University of Coimbra, Portugal
+</footer>
+
+<script>
+  const buttons = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.panel');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.panel).classList.add('active');
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  });
+</script>
+
+</body>
+</html>
